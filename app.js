@@ -1,6 +1,6 @@
 const display = document.getElementById("current-operation");
 const buttons = document.querySelectorAll("#buttons-container button");
-console.log(display);
+
 //Initial Values
 let currentNumber = "";
 let firstOperand = null;
@@ -57,6 +57,7 @@ buttons.forEach((btn) => {
         operator = null;
         updateScreen();
       }
+    //Clear field buttons
     } else if (value === "CE") {
       //Clear the current input
       currentNumber = "";
@@ -75,7 +76,7 @@ buttons.forEach((btn) => {
   });
 });
 
-//Calculation functiom (with parameteres)
+//Calculation function (with parameteres)
 function calculate(num1, num2, operator) {
   num1 = parseFloat(num1);
   num2 = parseFloat(num2);
